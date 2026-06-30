@@ -6,6 +6,7 @@ from docx.shared import Inches
 from src.models.profile import Profile
 from src.components.header_component import HeaderComponent
 
+from src.components.summary_component import SummaryComponent
 
 class CVBuilder:
 
@@ -25,6 +26,11 @@ class CVBuilder:
 
         # Build header
         HeaderComponent(
+            document,
+            self.profile
+        ).build()
+
+        SummaryComponent(
             document,
             self.profile
         ).build()
