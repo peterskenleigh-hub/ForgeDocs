@@ -1,6 +1,7 @@
 from docx import Document
 
 from src.models.profile import Profile
+from src.components.header_component import HeaderComponent
 
 
 class CVBuilder:
@@ -12,15 +13,9 @@ class CVBuilder:
 
         document = Document()
 
-        document.add_heading(self.profile.full_name, level=1)
+        HeaderComponent(
+            document,
+            self.profile
+        ).build()
 
-        document.add_paragraph(self.profile.professional_title)
-
-        document.add_paragraph(self.profile.email)
-
-        document.add_paragraph(self.profile.phone)
-
-        document.add_paragraph(self.profile.location)
-
-        document.save("Kenleigh_Peters_CV.docx")
-        
+        document.save("output/Kenleigh_Peters_CV.docx")
