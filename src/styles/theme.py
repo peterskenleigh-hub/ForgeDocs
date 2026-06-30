@@ -4,12 +4,19 @@ from docx.shared import RGBColor
 
 class Theme:
 
-    NAME_FONT_SIZE = Pt(22)
+    # Typography
+    NAME_SIZE = Pt(24)
+    TITLE_SIZE = Pt(13)
+    BODY_SIZE = Pt(10)
 
-    TITLE_FONT_SIZE = Pt(12)
+    FONT = "Calibri"
 
-    BODY_FONT_SIZE = Pt(10)
+    # Colours
+    PRIMARY = RGBColor(34, 40, 49)
+    SECONDARY = RGBColor(100, 100, 100)
 
-    PRIMARY_COLOUR = RGBColor(33, 37, 41)
+    # Spacing
+    SECTION_SPACE_BEFORE = Pt(12)
+    SECTION_SPACE_AFTER = Pt(6)
 
-    SECONDARY_COLOUR = RGBColor(100, 100, 100)
+    PAGE_MARGIN = 0.6
